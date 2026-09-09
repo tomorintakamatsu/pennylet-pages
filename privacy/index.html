@@ -29,7 +29,7 @@
     <header>
       <div class="brand">PennyLet</div>
       <h1>Privacy Policy</h1>
-      <p class="date">Effective and last updated: September 6, 2026</p>
+      <p class="date">Effective and last updated: September 10, 2026</p>
     </header>
     <main>
       <p>PennyLet is a local-first iPhone and iPad budgeting app. Its core features work without a PennyLet account, bank login, Plaid connection, or cloud finance sync.</p>
@@ -52,7 +52,7 @@
       <p>Backups need a working iCloud account, connection, and available storage. A failed upload leaves your local data in place, but the cloud copy may be older. Check the backup status and last successful backup in Settings &gt; Data before deleting the app.</p>
       <p>Pro subscription access and permission for online AI are not restored from this backup. Apple StoreKit checks Pro separately using the Apple Account that purchased it, and a restored installation asks again before sending a new online AI request.</p>
 
-      <h2>4. Optional online AI</h2>
+      <h2 id="online-ai">4. Optional online AI</h2>
       <div class="notice"><p>Online AI is off until you allow it. You can turn it off again in PennyLet Settings under Legal.</p></div>
       <p>When you allow and use an online AI feature, PennyLet sends a limited text request through PennyLet's Cloudflare Worker to the external AI processor DeepSeek. Depending on the feature, that request can contain:</p>
       <ul>
@@ -62,6 +62,7 @@
         <li>recognized receipt text used to extract merchant, amount, date, category, and line-item details.</li>
       </ul>
       <p>PennyLet minimizes each request for its purpose. It does not intentionally include bank credentials, card credentials, advertising identifiers, a PennyLet account identity, or your full local database.</p>
+      <p>These requests are not guaranteed to be anonymous. Questions, notes, merchant labels, and recognized receipt text may contain information that identifies you. The service also authenticates requests using an installation identifier. Please leave out personal details that are not needed for your question.</p>
       <p>Online AI results are generated for reference and may be incomplete or inaccurate. Review important amounts against your saved records. PennyLet does not provide financial, investment, tax, or legal advice.</p>
 
       <h2>5. Receipt scanning</h2>
@@ -79,6 +80,7 @@
 
       <h2>7. Security and abuse prevention</h2>
       <p>PennyLet uses Apple App Attest when available to help verify genuine installations. An Apple-generated app-install key identifier, cryptographic proof, counters, environment information, and security timestamps may be processed by PennyLet's Cloudflare Worker. These records are used for fraud prevention and request limiting, not advertising, and are not added to the AI prompt.</p>
+      <p>The installation identifier is persistent security data, not an advertising ID. Security records can remain on the service after you delete the app; the current service does not automatically expire every registered installation record. Reset clears your local budget and its recovery copy, not records already processed by external services. Contact us for a request concerning service-side data.</p>
 
       <h2>8. Other services</h2>
       <ul>
@@ -86,7 +88,7 @@
         <li><strong>Apple CloudKit:</strong> If Private iCloud Backup is enabled, Apple stores PennyLet's recovery archive in your private iCloud database.</li>
         <li><strong>Apple subscription settings:</strong> PennyLet can open Apple's subscription-management page. PennyLet cannot read every subscription in your Apple Account.</li>
         <li><strong>Frankfurter:</strong> Optional exchange-rate requests send the source and destination currency codes. PennyLet does not send transaction descriptions, balances, or bank credentials with those requests.</li>
-        <li><strong>Apple notifications:</strong> Check reminders and goal notifications are scheduled through iOS only after you allow notifications.</li>
+        <li><strong>Apple notifications:</strong> Payday reminders, check reminders, goal completion, and Ask PennyLet completion alerts use iOS notification permission. A running AI request may have limited time to finish after you leave the app; iOS does not guarantee continuous background work.</li>
       </ul>
 
       <h2>9. What PennyLet does not do</h2>
@@ -107,10 +109,12 @@
 
       <h2>14. Contact</h2>
       <p>For privacy questions or requests, contact <a href="mailto:f32pluspai@gmail.com">f32pluspai@gmail.com</a>.</p>
+      <p>If you email us, your email address, message, and any attachments are handled by our email provider and used to answer you. Do not send bank credentials or a complete financial export when a short description will do. You can also ask us to delete support correspondence, subject to any legal retention obligations.</p>
     </main>
     <footer>
-      <a href="../landing/">PennyLet website</a>
-      <a href="../support/">Support</a>
+      <a href="https://tomorintakamatsu.github.io/pennylet-pages/landing/">PennyLet website</a>
+      <a href="https://tomorintakamatsu.github.io/pennylet-pages/support/">Support</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a>
     </footer>
   </body>
 </html>
