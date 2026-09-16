@@ -29,7 +29,7 @@
     <header>
       <div class="brand">PennyLet</div>
       <h1>Privacy Policy</h1>
-      <p class="date">Effective and last updated: September 10, 2026</p>
+      <p class="date">Effective and last updated: September 14, 2026</p>
     </header>
     <main>
       <p>PennyLet is a local-first iPhone and iPad budgeting app. Its core features work without a PennyLet account, bank login, Plaid connection, or cloud finance sync.</p>
@@ -45,10 +45,11 @@
       <p>You control how long local data remains. You can export transactions, clear Ask PennyLet history, or use Reset to remove PennyLet data. Files you export are stored wherever you choose and are then controlled by you and the selected storage provider.</p>
 
       <h2>3. Private iCloud Backup</h2>
-      <p>Private iCloud Backup is enabled by default when iCloud is available. It keeps one recovery copy containing your budgeting records, preferences, watchlists, AI history, and saved wallpaper profiles. An empty installation can restore that copy after you reinstall PennyLet or install it on another device signed into the same iCloud account. You can use core budgeting without iCloud.</p>
+      <p>Private iCloud Backup is enabled by default when iCloud is available. It keeps separate, dated saves containing your budgeting records, preferences, watchlists, AI history, and saved wallpaper profiles. An empty installation can restore the latest completed save after you reinstall PennyLet or install it on another device signed into the same iCloud account. You can use core budgeting without iCloud.</p>
       <p>The recovery copy is stored in your private Apple CloudKit database, is accessible only to your iCloud user by default, counts against your iCloud storage quota, and is not visible to PennyLet's developer through the developer portal. It is not sent to Cloudflare or the online AI provider.</p>
-      <p>This is a recovery backup, not live multi-device sync. PennyLet keeps one latest copy, not a version history. A manual restore replaces the data on that device. You can back up, restore, or turn backup off under Settings &gt; Data.</p>
-      <p>Deleting PennyLet from a device does not delete its iCloud recovery copy. Turning backup off removes the recovery archive and keeps a small record of that choice, without your financial data, so a reinstall can remember it. Reset removes the recovery archive before clearing local data when iCloud backup is enabled. If that removal cannot be confirmed, Reset stops and keeps your local data. Exported files are not deleted by Reset.</p>
+      <p>This is recovery backup, not live multi-device sync. Restore from iCloud opens your saved history so you can choose a date and time. Restoring replaces data on that device, not your other iCloud saves. Saves accumulate without automatic pruning and use your iCloud storage. You can back up, restore, or turn backup off under Settings &gt; Data.</p>
+      <p>The separate Back up when I open PennyLet setting is on by default. It requests a save when you launch or return to the app, when iCloud and a connection are available. You can turn that setting off without deleting saves or disabling manual and change-triggered backups.</p>
+      <p>Deleting PennyLet from a device does not delete its iCloud saves. Reset clears this device but keeps saved backups. After a reset, automatic backup is paused until you restore or choose Save and Resume, which adds a new save and keeps earlier ones. To delete all indexed iCloud recovery saves, turn backup off in Settings &gt; Data and confirm. A small record of that choice remains, without your financial data, so a reinstall can remember it. If deletion is interrupted, retry it to finish removing the saved files. Exported files are not deleted by Reset.</p>
       <p>Backups need a working iCloud account, connection, and available storage. A failed upload leaves your local data in place, but the cloud copy may be older. Check the backup status and last successful backup in Settings &gt; Data before deleting the app.</p>
       <p>Pro subscription access and permission for online AI are not restored from this backup. Apple StoreKit checks Pro separately using the Apple Account that purchased it, and a restored installation asks again before sending a new online AI request.</p>
 
@@ -57,8 +58,8 @@
       <p>When you allow and use an online AI feature, PennyLet sends a limited text request through PennyLet's Cloudflare Worker to the external AI processor DeepSeek. Depending on the feature, that request can contain:</p>
       <ul>
         <li>a prepared summary of saved transactions, totals, budgets, goals, subscriptions, payday details, or other relevant PennyLet records;</li>
-        <li>the money-related question you type into Ask PennyLet;</li>
-        <li>a watchlist name and a bounded set of current-month merchant, category, and description text used to identify matching entries; watchlist matching does not send transaction amounts or dates; or</li>
+        <li>your Ask PennyLet question, relevant saved labels and names to identify what you asked about, then app-calculated results to explain the answer;</li>
+        <li>a watchlist name and batches of current-month merchant, category, and description text used to identify matching entries; watchlist matching does not send transaction amounts or dates; or</li>
         <li>recognized receipt text used to extract merchant, amount, date, category, and line-item details.</li>
       </ul>
       <p>PennyLet minimizes each request for its purpose. It does not intentionally include bank credentials, card credentials, advertising identifiers, a PennyLet account identity, or your full local database.</p>
@@ -80,7 +81,7 @@
 
       <h2>7. Security and abuse prevention</h2>
       <p>PennyLet uses Apple App Attest when available to help verify genuine installations. An Apple-generated app-install key identifier, cryptographic proof, counters, environment information, and security timestamps may be processed by PennyLet's Cloudflare Worker. These records are used for fraud prevention and request limiting, not advertising, and are not added to the AI prompt.</p>
-      <p>The installation identifier is persistent security data, not an advertising ID. Security records can remain on the service after you delete the app; the current service does not automatically expire every registered installation record. Reset clears your local budget and its recovery copy, not records already processed by external services. Contact us for a request concerning service-side data.</p>
+      <p>The installation identifier is persistent security data, not an advertising ID. Security records can remain on the service after you delete the app; the current service does not automatically expire every registered installation record. Reset clears your local budget, not its saved iCloud backup or records already processed by external services. Contact us for a request concerning service-side data.</p>
 
       <h2>8. Other services</h2>
       <ul>
